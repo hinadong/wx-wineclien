@@ -1,6 +1,20 @@
 page{
     height: 100%;
 }
+
+
+
+
+
+
+
+
+.icon_back{
+    width: 25%;
+    height:100%;
+    float: left
+}
+
 /*view*/
 .content{
     font-size: 16px;
