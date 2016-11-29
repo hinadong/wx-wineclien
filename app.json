@@ -1,7 +1,8 @@
 {
   "pages":[
     "pages/Home/home",
-    "pages/category/category"
+    "pages/category/category",
+    "pages/group/group"
   ],
   "window":{
     "backgroundTextStyle":"light",

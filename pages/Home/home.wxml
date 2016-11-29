@@ -9,7 +9,7 @@
         <swiper indicator-dots="{{true}}" autoplay="{{true}}" interval="2000" duration="350">
             <block wx:for="{{imageArray}}">
                 <swiper-item>
-                <image src="{{item.img}}" style="width:100%;height:100%" mode="scaleToFill"/>
+                <image src="{{item.img}}" style="width:100%;height:100%" mode="scaleToFill" bindtap="runLoopImageDid" id="{{index}}"/>
                 </swiper-item>
             </block>
         </swiper>
@@ -22,7 +22,7 @@
             </view>
         </view>
         <view style="height:50%;width:100%;">
-           <view class="icon_back"wx:for-items="{{iconArray}}" wx:for-item="item" wx:if="{{index<4}}">
+           <view class="icon_back"wx:for-items="{{iconArray}}" wx:for-item="item" wx:if="{{index>=4}}">
                 <image src="{{item.picture_url}}" style="width:60px;height:60px;display:table;margin-left:auto;margin-right:auto"></image>
                 <text style="display:table;margin-left:auto;margin-right:auto;font-size:12px;">{{item.title}}</text>
             </view>

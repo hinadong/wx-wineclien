@@ -20,6 +20,11 @@ Page({
   onUnload:function(){
     // 页面关闭
   },
+  runLoopImageDid(par){
+    var index = par.currentTarget.id;
+    var imageDic = this.data.imageArray[index];
+    this.pushOtherController(imageDic);
+  },
   // 添加商品按钮被点击
   addButtonClick:function(id){
       var index = parseInt(id.currentTarget.id);
@@ -58,6 +63,38 @@ Page({
           collectionDataSource : this.data.collectionDataSource
       })
   },
+
+
+
+// 轮播图跳转
+pushOtherController(obj){
+  wx.showToast({
+    title:"您点击了"+ obj.event_mark,
+    duration:2000,
+  })
+  // 0 不跳转
+  if(obj.event_mark == 0){
+    return;
+  }
+  // 3跳转到商品分组
+  if(obj.event_mark == 3){
+    console.log('../group/group?par='+ obj.event_memo);
+    wx.navigateTo({
+      url: '../group/group?par='+ obj.event_memo,
+      success: function(res){
+        // success
+      },
+      fail: function() {
+        // fail
+      },
+      complete: function() {
+        // complete
+      }
+    })
+  }
+},
+
+
 
 
   // 从服务器拉取数据

@@ -1,0 +1,12 @@
+<view class = "content">
+    <scroll-view scroll-y="{{true}}" style="width:100%;height:100%">
+        <view wx:for-items="{{dataSource}}" wx:for-item="item" class = "item">
+            <view class = "item_left_image_back">
+                <image src="{{item.avatar_url}}" class = "item_left_image"></image>
+            </view>
+            <view class = "item_right_view_back">
+            </view>
+            <view class = "item_line"/>
+        </view>
+    </scroll-view>
+</view>
