@@ -12,7 +12,7 @@ page{
 .icon_back{
     width: 25%;
     height:100%;
-    float: left
+    float: left;
 }
 
 /*view*/

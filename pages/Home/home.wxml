@@ -16,39 +16,15 @@
     </view>
     <view style="height:160px;width:100%;">
          <view style="height:50%;width:100%;">
-            <view class="icon_back">
-                <image src="{{iconArray[0].picture_url}}" style="width:60px;height:60px;display:table;margin-left:auto;margin-right:auto"></image>
-                <text style="display:table;margin-left:auto;margin-right:auto;font-size:12px;">{{iconArray[0].title}}</text>
-            </view>
-            <view class="icon_back">
-                <image src="{{iconArray[1].picture_url}}" style="width:60px;height:60px;display:table;margin-left:auto;margin-right:auto"></image>
-                <text style="display:table;margin-left:auto;margin-right:auto;font-size:12px;">{{iconArray[1].title}}</text>
-            </view>
-            <view class="icon_back">
-                <image src="{{iconArray[2].picture_url}}" style="width:60px;height:60px;display:table;margin-left:auto;margin-right:auto"></image>
-                <text style="display:table;margin-left:auto;margin-right:auto;font-size:12px;">{{iconArray[2].title}}</text>
-            </view>
-            <view class="icon_back">
-                <image src="{{iconArray[3].picture_url}}" style="width:60px;height:60px;display:table;margin-left:auto;margin-right:auto"></image>
-                <text style="display:table;margin-left:auto;margin-right:auto;font-size:12px;">{{iconArray[3].title}}</text>
+            <view class="icon_back"wx:for-items="{{iconArray}}" wx:for-item="item" wx:if="{{index<4}}">
+                <image src="{{item.picture_url}}" style="width:60px;height:60px;display:table;margin-left:auto;margin-right:auto"></image>
+                <text style="display:table;margin-left:auto;margin-right:auto;font-size:12px;">{{item.title}}</text>
             </view>
         </view>
         <view style="height:50%;width:100%;">
-            <view class="icon_back">
-                <image src="{{iconArray[4].picture_url}}" style="width:60px;height:60px;display:table;margin-left:auto;margin-right:auto"></image>
-                <text style="display:table;margin-left:auto;margin-right:auto;font-size:12px;">{{iconArray[4].title}}</text>
-            </view>
-            <view class="icon_back">
-                <image src="{{iconArray[5].picture_url}}" style="width:60px;height:60px;display:table;margin-left:auto;margin-right:auto"></image>
-                <text style="display:table;margin-left:auto;margin-right:auto;font-size:12px;">{{iconArray[5].title}}</text>
-            </view>
-            <view class="icon_back">
-                <image src="{{iconArray[6].picture_url}}" style="width:60px;height:60px;display:table;margin-left:auto;margin-right:auto"></image>
-                <text style="display:table;margin-left:auto;margin-right:auto;font-size:12px;">{{iconArray[6].title}}</text>
-            </view>
-            <view class="icon_back">
-                <image src="{{iconArray[7].picture_url}}" style="width:60px;height:60px;display:table;margin-left:auto;margin-right:auto"></image>
-                <text style="display:table;margin-left:auto;margin-right:auto;font-size:12px;">{{iconArray[7].title}}</text>
+           <view class="icon_back"wx:for-items="{{iconArray}}" wx:for-item="item" wx:if="{{index<4}}">
+                <image src="{{item.picture_url}}" style="width:60px;height:60px;display:table;margin-left:auto;margin-right:auto"></image>
+                <text style="display:table;margin-left:auto;margin-right:auto;font-size:12px;">{{item.title}}</text>
             </view>
         </view>
     </view>
