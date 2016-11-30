@@ -9,19 +9,19 @@ page{
 }
 .item{
     width:100%;
-    height:80px;
+    height:120px;
     position:relative;
 }
 .item_line{
-    background-color: #0f0;
+    background-color: #ddd;
     position: absolute;
-    top: 79px;
+    top: 119px;
     height: 1px;
     width: 100%;
 }
 .item_left_image_back{
-    width:80px;
-    height: 79px;
+    width:119px;
+    height: 119px;
     position: absolute;
 }
 .item_left_image{
@@ -30,9 +30,94 @@ page{
     height: 100%
 }
 .item_right_view_back{
-    left: 80px;
+    left: 119px;
     top: 0px;
     bottom: 1px;
     right: 0px;
+    position: absolute;
+}
+.item_right_title{
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    right: 5px;
+    height: 20px;
+    word-break:keep-all;           /* 不换行 */
+    white-space:nowrap;          /* 不换行 */
+    overflow:hidden;               /* 内容超出宽度时隐藏超出部分的内容 */
+    text-overflow:ellipsis;
+}
+.item_right_good_tag{
+    font-size: 10px;
+    color: white;
+    border-color: red;
+    background-color: red;
+    border-radius: 2px;
+    position: absolute;
+    text-align: center;
+    top: 30px;
+    left:5px;
+    height: 12px;
+    width: 25px;
+}
+.item_right_good_specification{
+    position: absolute;
+    font-size: 15px;
+    top: 47px;
+    left: 5px;
+    right: 5px;
+    height: 20px;
+}
+.item_right_add_image{
+    width: 20px;
+    height: 20px;
+    ime-mode: scaleToFill;
+    position: absolute;
+    right: 10px;
+    bottom: 5px;
+}
+.item_right_reduce_image{
+    width: 20px;
+    height: 20px;
+    ime-mode: scaleToFill;
+    position: absolute;
+    right: 50px;
+    bottom: 5px;
+}
+.item_right_good_buy_number{
+    width: 20px;
+    height: 20px;
+    ime-mode: scaleToFill;
+    position: absolute;
+    right: 30px;
+    bottom: 4px;
+    text-align: center;
+}
+.item_right_good_sale_count{
+    position: absolute;
+    left: 5px;
+    right: 5px;
+    height: 20px;
+    bottom: 20px;
+    font-size: 15px;
+}
+.item_right_good_price{
+    bottom: 5px;
+    height: 15px;
+    left: 5px;
+    color: red;
+    float: left;
+    font-size: 15px;
+}
+.item_right_good_mark_price{
+    height: 15px;
+    float: left;
+    font-size: 13px;
+    text-decoration:line-through;
+}
+.item_rice{
+    height: 20px;
+    width: 80%;
+    bottom: 0px;
     position: absolute;
 }

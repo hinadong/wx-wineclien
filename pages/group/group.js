@@ -27,6 +27,33 @@ Page({
     // 页面关闭
     
   },
+  reduceImageClick(par){
+     var index = parseInt(par.currentTarget.id);
+     var obj = this.data.dataSource[index];
+     console.log(obj)
+     if (obj.buy > 0){
+       obj.buy -= 1;
+       this.setData({
+          dataSource:this.data.dataSource
+      })
+     }
+     
+  },
+  addImageDidClick(par){
+    var index = parseInt(par.currentTarget.id);
+    var obj = this.data.dataSource[index];
+    if (obj.buy < obj.stock){
+       obj.buy += 1;
+     }else{
+       wx.showToast({
+         title:"库存不足",
+          duration:2000,
+       });
+     }
+    this.setData({
+      dataSource:this.data.dataSource
+    })
+  },
 //   获取商品分组数据
   getDataFromServe(){
       if(this.data.product_group_id.length == 0){
@@ -45,10 +72,14 @@ Page({
         method: 'GET', // OPTIONS, GET, HEAD, POST, PUT, DELETE, TRACE, CONNECT
         // header: {}, // 设置请求的 header
         success: function(res){
-            that.setData({
-                dataSource:res.data,
-            })
-            console.log(that.data.dataSource)
+          for(var i = 0 ; i < res.data.length;i++){
+            var obj = res.data[i];
+            obj.buy = parseInt(0);
+          }
+
+          that.setData({
+              dataSource:res.data,
+          })
         },
         fail: function() {
           // fail

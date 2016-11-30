@@ -2,7 +2,7 @@
 
 
 <view class="content">
-<scroll-view class="collectionView" scroll-y="false">
+<scroll-view class="collectionView" scroll-y="{{false}}">
 
     <view style="height:26%;width:100%">
     <!--轮播图-->

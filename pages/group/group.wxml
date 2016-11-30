@@ -5,6 +5,17 @@
                 <image src="{{item.avatar_url}}" class = "item_left_image"></image>
             </view>
             <view class = "item_right_view_back">
+                <text class = "item_right_title">{{item.title}}</text>
+                <text class = "item_right_good_tag">促销</text>
+                <text class = "item_right_good_specification">{{item.specification}}</text>
+                <text class = "item_right_good_sale_count">{{"已售"+item.sale_count}}</text>
+                <view class="item_rice">
+                    <text class = "item_right_good_price">{{"¥"+item.price + ".00"}}</text>
+                    <text class = "item_right_good_mark_price">{{"¥"+item.marketPrice}}</text>
+                </view>
+                <image src="../resource/reduce.png" class = "item_right_reduce_image" bindtap="reduceImageClick" id = "{{index}}" ></image>
+                <text class = "item_right_good_buy_number">{{item.buy}}</text>
+                <image src="../resource/add.png" class = "item_right_add_image" bindtap="addImageDidClick" id = "{{index}}" ></image>
             </view>
             <view class = "item_line"/>
         </view>
