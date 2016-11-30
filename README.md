@@ -1,6 +1,7 @@
 # wx-wineclien
 微信小程序
-
-首次开发，模仿一个商城类app，持续更新中
+小应用,
+仿酒运达首页，
+持续更新中，换衣fork，stats
 
 <img src="./pages/resource/ex.gif"/>
