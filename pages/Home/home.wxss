@@ -28,7 +28,7 @@ page{
 
 /*每个item的线*/
 .line{
-    background-color: #000;
+    background-color: #ddd;
     height: 1px;
     width: 100%;
     margin-bottom: 1px;
@@ -81,13 +81,13 @@ page{
 /*item左侧的div*/
 .super_left{
     float: left;
-    width: 50%;
+    width: 49.75%;
     height: 100%;
 }
 /*item左侧的div*/
 .super_right{
     float: right;
-    width: 50%;
+    width: 49.75%;
     height: 100%;
 }
 /*添加购物车图片*/

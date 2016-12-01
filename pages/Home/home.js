@@ -78,9 +78,8 @@ pushOtherController(obj){
   }
   // 3跳转到商品分组
   if(obj.event_mark == 3){
-    console.log('../group/group?par='+ obj.event_memo);
     wx.navigateTo({
-      url: '../group/group?par='+ obj.event_memo,
+      url: '../group/group?par='+ obj.event_memo + "&title="+obj.product_group_title,
       success: function(res){
         // success
       },

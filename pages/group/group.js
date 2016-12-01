@@ -1,13 +1,19 @@
 Page({
   data:{
     dataSource:[],
-    product_group_id:''
+    product_group_id:'',
+    title:''
   },
   onLoad:function(options){
     // 页面初始化 options为页面跳转所带来的参数
     console.log(options.par);
     this.setData({
-        product_group_id:options.par
+        product_group_id:options.par,
+        title:options.title
+    })
+    console.log(options)
+    wx.setNavigationBarTitle({
+      title: options.title
     })
     this.getDataFromServe();
   },
