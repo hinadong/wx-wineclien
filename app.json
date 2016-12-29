@@ -2,7 +2,8 @@
   "pages":[
     "pages/Home/home",
     "pages/category/category",
-    "pages/group/group"
+    "pages/group/group",
+    "pages/shopDetail/shopDetail"
   ],
   "window":{
     "backgroundTextStyle":"light",

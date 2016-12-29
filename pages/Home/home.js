@@ -20,6 +20,19 @@ Page({
   onUnload:function(){
     // 页面关闭
   },
+  shopImageDidClick(par){
+    var index = parseInt(par.currentTarget.id)
+    var shop = this.data.collectionDataSource[index]
+    wx.navigateTo({
+      url: '../shopDetail/shopDetail?id=' + shop.id + "&title=" + shop.title,
+      success: function(res){
+      },
+      fail: function() {
+      },
+      complete: function() {
+      }
+    })
+  },
   runLoopImageDid(par){
     var index = par.currentTarget.id;
     var imageDic = this.data.imageArray[index];
@@ -126,8 +139,7 @@ getHotGoodData(){
 },
 // 处理热门商品数据
 updateHotGoodData(data){
-  console.log(data);
-  for(var i = 0; i< data.length;i++){
+    for(var i = 0; i< data.length;i++){
     var obj = data[i];
     obj["buy"] = 0;
   }
@@ -147,7 +159,6 @@ updateDataSource:function(data){
     obj.img = "http://www.jiuyunda.net:90"+obj.img;
   }
   var iconArray = data.icon_list;
-  console.log(iconArray);
   this.setData({
     imageArray:imageArray,
     iconArray:iconArray

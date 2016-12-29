@@ -35,7 +35,7 @@
     <view class="collectionView_item" wx:for-items="{{collectionDataSource}}" wx:for-item="item" wx:key="collectionDataSource" wx:if="{{index %2 == 0}}">
         <view class="back_view">
             <view class="super_left">
-                <view class="item_top">
+                <view class="item_top"  bindtap="shopImageDidClick" id = "{{index}}">
                 <!--商品主图-->
                     <image class="image" src="{{collectionDataSource[index].avatar_url}}"/>
                 </view>
@@ -58,7 +58,7 @@
             <view class="super_right">
                 <view class="item_top">
                 <!--商品主图-->
-                    <image class="image" src="{{collectionDataSource[index + 1].avatar_url}}"/>
+                    <image class="image" src="{{collectionDataSource[index + 1].avatar_url}}" bindtap="shopImageDidClick" id = "{{index + 1}}"/>
                 </view>
                 <!--商品标题-->
                 <view class="title_back">

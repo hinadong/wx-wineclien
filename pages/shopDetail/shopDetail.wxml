@@ -1,0 +1,31 @@
+<view class = "content">
+<!--商品轮播图-->
+    <view class = "swipe_back_style">
+        <swiper autoplay = "{{true}}" indicator-dots = "{{true}}" duration = "350" class = "swipe_back_style" style = "height:100%;background-color:red">
+            <block wx:for-items = "{{model.product_info.pic_array}}" wx:for-item="item">
+                <swiper-item style="height:100%;width:100%">
+                    <image src="{{item}}" style="height:100%;width:100%"/>
+                </swiper-item>
+            </block>
+        </swiper>
+    </view>
+<!--商品信息-->
+    <view class = "shop_info_back">
+    </view>
+    <view class = "shop_buy_shop_back_view">
+        <view class = "shop_like_shop_back" style = "width: 30%">
+            <view class = "shop_like_button">
+                <image src="../resource/like.png" class = "shop_like_image"></image>
+                <text class = "shop_like_text">收藏</text>
+            </view>
+            <view class = "shop_like_button">
+                <image src="../resource/like.png" class = "shop_like_image"></image>
+                <text class = "shop_like_text">购物车</text>
+            </view>
+        </view>
+        <view class = "shop_like_shop_back" style = "width: 70%">
+            <button class = "shop_buy_button" style = "background-color:#dddddd">加入购物车</button>
+            <button class = "shop_buy_button" style = "background-color:#ff0000">立即购买</button>
+        </view>
+    </view>
+</view>

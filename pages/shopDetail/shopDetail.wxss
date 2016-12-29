@@ -1,0 +1,55 @@
+page{
+    height: 100%;
+    width: 100%
+}
+.content{
+    width: 100%;
+    height: 100%;
+    background-color: rebeccapurple;
+}
+
+.swipe_back_style{
+    width: 100%;
+    height: 50%;
+}
+.shop_info_back{
+    width: 100%;
+    height: 40%;
+    background-color: yellow
+}
+.shop_buy_shop_back_view{
+    height: 10%;
+    width: 100%;
+    background-color: blue
+}
+/*喜欢，，收藏按钮背景*/
+.shop_like_shop_back{
+    height: 100%;
+    float: left
+}
+/*收藏按钮  购物车按钮*/
+.shop_like_button{
+    width: 50%;
+    height: 100%;
+    float: left;
+}
+.shop_like_image{
+    width: 30px;
+    height: 30px;
+    display: table;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 8%;
+}
+.shop_like_text{
+    width: 100%;
+    display: block;
+    height: auto;
+    text-align: center;
+    font-size: 17px;
+}
+.shop_buy_button{
+    width: 50%;
+    height: 100%;
+    float: left
+}
